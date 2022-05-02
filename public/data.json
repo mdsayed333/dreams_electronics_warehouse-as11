@@ -1,0 +1,82 @@
+[
+    {
+        "id": 1,
+        "name": "WALTON REFRIGERATOR",
+        "price": "300",
+        "quantity": 7,
+        "img": "https://i.ibb.co/dGDkr4v/1.jpg",
+        "supplier-name": "Kuddus Khan"
+    },
+    {
+        "id": 2,
+        "name": "WALTON REFRIGERATOR",
+        "price": "300",
+        "quantity": 7,
+        "img": "https://i.ibb.co/dGDkr4v/1.jpg",
+        "supplier-name": "Kuddus Khan"
+    },
+    {
+        "id": 3,
+        "name": "WALTON REFRIGERATOR",
+        "price": "300",
+        "quantity": 7,
+        "img": "https://i.ibb.co/dGDkr4v/1.jpg",
+        "supplier-name": "Kuddus Khan"
+    },
+    {
+        "id": 4,
+        "name": "WALTON REFRIGERATOR",
+        "price": "300",
+        "quantity": 7,
+        "img": "https://i.ibb.co/dGDkr4v/1.jpg",
+        "supplier-name": "Kuddus Khan"
+    },
+    {
+        "id": 5,
+        "name": "WALTON REFRIGERATOR",
+        "price": "300",
+        "quantity": 7,
+        "img": "https://i.ibb.co/dGDkr4v/1.jpg",
+        "supplier-name": "Kuddus Khan"
+    },
+    {
+        "id": 6,
+        "name": "WALTON REFRIGERATOR",
+        "price": "300",
+        "quantity": 7,
+        "img": "https://i.ibb.co/dGDkr4v/1.jpg",
+        "supplier-name": "Kuddus Khan"
+    },
+    {
+        "id": 7,
+        "name": "WALTON REFRIGERATOR",
+        "price": "300",
+        "quantity": 7,
+        "img": "https://i.ibb.co/dGDkr4v/1.jpg",
+        "supplier-name": "Kuddus Khan"
+    },
+    {
+        "id": 8,
+        "name": "WALTON REFRIGERATOR",
+        "price": "300",
+        "quantity": 7,
+        "img": "https://i.ibb.co/dGDkr4v/1.jpg",
+        "supplier-name": "Kuddus Khan"
+    },
+    {
+        "id": 9,
+        "name": "WALTON REFRIGERATOR",
+        "price": "300",
+        "quantity": 7,
+        "img": "https://i.ibb.co/dGDkr4v/1.jpg",
+        "supplier-name": "Kuddus Khan"
+    },
+    {
+        "id": 10,
+        "name": "WALTON REFRIGERATOR",
+        "price": "300",
+        "quantity": 7,
+        "img": "https://i.ibb.co/dGDkr4v/1.jpg",
+        "supplier-name": "Kuddus Khan"
+    }
+]

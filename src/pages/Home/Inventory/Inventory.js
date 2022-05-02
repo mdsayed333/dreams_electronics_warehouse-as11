@@ -12,13 +12,18 @@ const Inventory = () => {
 
     
 
-    console.log(products);
+    // console.log(products);
     return (
         <div>
             <h2>This is Inventory</h2>
-            {
-                products.map(product => <Product ></Product>)
-            }
+            <div className='row'>
+                {
+                    products.map(product => <Product 
+                    key={product.id}
+                    product={product}
+                    ></Product>)
+                }
+            </div>
         </div>
     );
 };

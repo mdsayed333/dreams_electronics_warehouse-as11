@@ -29,13 +29,12 @@ const Login = () => {
             required
           />
         </Form.Group>
-        <Button
-          className="w-50 d-block mx-auto mb-2"
-          variant="primary"
+        <button
+          className="w-50 d-block mx-auto mb-2 my-button"
           type="submit"
         >
           Login
-        </Button>
+        </button>
       </Form>
 
       <div className="d-flex justify-content-between align-items-center">

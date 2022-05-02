@@ -2,11 +2,9 @@ import React from "react";
 import { Container, Nav, Navbar, NavDropdown } from "react-bootstrap";
 import { Link } from "react-router-dom";
 
-const HeaderNavber = () => {
+const HeaderNavbar = () => {
   return (
-    <div>
-      {/* <h2>Dreams Electronics</h2> */}
-                                        {/* bg="dark" variant="dark" */}
+    <div className="mt-2">
       <Navbar collapseOnSelect expand="lg">
         <Container>
           <Navbar.Brand as={Link} to='/'>Dreams Electronics</Navbar.Brand>
@@ -18,7 +16,7 @@ const HeaderNavber = () => {
               
             </Nav>
             <Nav>
-              <Link to='/login'>Login</Link>
+              <Link to='/login' className="btn btn-outline-dark">Login</Link>
               {/* <Nav.Link href="#deets">Login</Nav.Link> */}
               {/* <Nav.Link eventKey={2} href="#memes">
                 Dank memes
@@ -31,4 +29,4 @@ const HeaderNavber = () => {
   );
 };
 
-export default HeaderNavber;
+export default HeaderNavbar;

@@ -2,9 +2,7 @@ import React from "react";
 
 const Banner = () => {
   return (
-    <div>
-      <h2>This is Banner...</h2>
-
+    <div className="my-4">
       <div
         id="carouselExampleIndicators"
         className="carousel slide"

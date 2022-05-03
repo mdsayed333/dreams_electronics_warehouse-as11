@@ -1,13 +1,40 @@
-import React from "react";
+import React, { useState } from "react";
 import { Button, Form } from "react-bootstrap";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
+import { useCreateUserWithEmailAndPassword } from 'react-firebase-hooks/auth';
+import auth from "../../firebase.init";
 
 const Register = () => {
+  const navigate = useNavigate();
+  const [passError, setPassError] = useState('');
+  const [
+    createUserWithEmailAndPassword,
+    user,
+    loading,
+    error,
+  ] = useCreateUserWithEmailAndPassword(auth);
 
+  if(user){
+    navigate('/');
+  }
+  
+  let registerErr;
+  if(error){
+     registerErr = <p className="text-danger">{error.message}</p>
+  }
+  
+    const handleSubmit = (event) => {
+      event.preventDefault();
+        const email = event.target.email.value;
+        const password = event.target.password.value;
+        const confirmPassword = event.target.confirmPassword.value;
 
-
-    const handleSubmit = () => {
-
+        if(password === confirmPassword){
+          createUserWithEmailAndPassword(email, password);
+        }
+        else{
+          setPassError(<p className="text-danger">Confirm Password not matched</p>);
+        }
     };
 
   return (
@@ -35,7 +62,7 @@ const Register = () => {
             required
           />
         </Form.Group>
-
+        {passError}
         <Form.Group className="mb-3">
         <Form.Label htmlFor="confirmPassword">Confirm Password</Form.Label>
           <Form.Control
@@ -51,8 +78,9 @@ const Register = () => {
           variant="primary"
           type="submit"
         >
-          Login
+          Register
         </Button>
+        {registerErr}
       </Form>
       <p>
           Already have an account? <Link to='/login'>Login</Link>

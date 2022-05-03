@@ -1,9 +1,35 @@
 import React from "react";
 import { Button, Form } from "react-bootstrap";
-import { Link } from "react-router-dom";
+import { useSignInWithEmailAndPassword } from "react-firebase-hooks/auth";
+import { Link, useNavigate } from "react-router-dom";
+import auth from "../../firebase.init";
 
 const Login = () => {
-  const handleSubmit = () => {};
+  const navigate = useNavigate();
+  const [
+    signInWithEmailAndPassword,
+    user,
+    loading,
+    error,
+  ] = useSignInWithEmailAndPassword(auth);
+
+
+  if(user){
+     navigate('/');
+  }
+
+  let loginErr;
+  if(error){
+     loginErr = <p className="text-danger">{error.message}</p>
+  }
+
+  const handleSubmit = (event) => {
+    event.preventDefault();
+      const email = event.target.email.value;
+      const password = event.target.password.value;
+      
+        signInWithEmailAndPassword(email, password);
+  };
   return (
     <div className="w-50 mx-auto">
       <h2>Please Login</h2>
@@ -35,6 +61,7 @@ const Login = () => {
         >
           Login
         </button>
+        {loginErr}
       </Form>
 
       <div className="d-flex justify-content-between align-items-center">

@@ -8,7 +8,7 @@ const ManageItem = () => {
     const handleDelete = (_id) => {
         const confirm = window.confirm("Are you sure you want to delete ...");
         if(confirm){
-            fetch(`http://localhost:5000/product/${_id}`, {
+            fetch(`https://arcane-fjord-84563.herokuapp.com/product/${_id}`, {
             method: 'DELETE',
             })
             .then(res => res.json())
@@ -16,7 +16,7 @@ const ManageItem = () => {
                 console.log(data);
                 const remaining = products.filter(product => product._id !== _id);
                 setProducts(remaining);
-            })
+            });
         }
     }
 

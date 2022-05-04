@@ -19,7 +19,7 @@ const AddItem = () => {
       supplierName: event.target.supplier.value,
     };
 
-    fetch("http://localhost:5000/product", {
+    fetch("https://arcane-fjord-84563.herokuapp.com/product", {
       method: "POST",
       headers: {
           "Content-type": "application/json",

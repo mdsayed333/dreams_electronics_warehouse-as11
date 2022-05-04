@@ -18,17 +18,16 @@ const AddItem = () => {
       quantity: event.target.quantity.value,
       supplierName: event.target.supplier.value,
     };
-    console.log(product);
 
     fetch("http://localhost:5000/product", {
       method: "POST",
-      body: JSON.stringify(product),
       headers: {
-        "Content-type": "application/json",
-      },
+          "Content-type": "application/json",
+        },
+        body: JSON.stringify(product)
     })
       .then((response) => response.json())
-      .then((json) => console.log(json));
+      .then((data) => console.log(data));
   };
 
   return (

@@ -1,35 +1,51 @@
-import React from "react";
-import { Button, Form } from "react-bootstrap";
-import { useSignInWithEmailAndPassword } from "react-firebase-hooks/auth";
-import { Link, useNavigate } from "react-router-dom";
+import React, { useState } from "react";
+import { Form } from "react-bootstrap";
+import { useSendPasswordResetEmail, useSignInWithEmailAndPassword } from "react-firebase-hooks/auth";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import auth from "../../firebase.init";
+import { toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 const Login = () => {
   const navigate = useNavigate();
+  const [resetWarning, setResetWarning] = useState('');
   const [
     signInWithEmailAndPassword,
     user,
     loading,
     error,
   ] = useSignInWithEmailAndPassword(auth);
+  const [sendPasswordResetEmail, sending, passResetError] = useSendPasswordResetEmail(auth);
+  const [email, setEmail] = useState('');
+  const location = useLocation();
 
+  let from = location.state?.from?.pathname || "/";
 
   if(user){
-     navigate('/');
+     navigate(from, {replace: true});
   }
 
   let loginErr;
   if(error){
      loginErr = <p className="text-danger">{error.message}</p>
   }
-
+  
   const handleSubmit = (event) => {
     event.preventDefault();
-      const email = event.target.email.value;
       const password = event.target.password.value;
       
         signInWithEmailAndPassword(email, password);
   };
+
+ 
+  const passReset = async() => {
+    if(email){
+      await sendPasswordResetEmail(email);
+          toast('Sent password reset email');
+    }else{
+      setResetWarning(<p className="text-danger">Please input your email</p>);
+    }
+  }
   return (
     <div className="w-50 mx-auto">
       <h2>Please Login</h2>
@@ -41,10 +57,11 @@ const Login = () => {
             name="email"
             type="email"
             placeholder="Enter email"
+            onBlur={(e) => setEmail(e.target.value)}
             required
           />
         </Form.Group>
-
+        {resetWarning}
         <Form.Group className="mb-3" >
         <Form.Label htmlFor="password">Password</Form.Label>
           <Form.Control
@@ -63,28 +80,27 @@ const Login = () => {
         </button>
         {loginErr}
       </Form>
-
+      <p className="text-danger">{passResetError?.message}</p>
+     
       <div className="d-flex justify-content-between align-items-center">
-      <p>
-        {/* Don't have account? */}
-         <Link
-          to="/register"
-          role="button"
-          className="text-danger text-decoration-none"
-        //   onClick={navigateRegister}
-        >
-          Create an account
-         </Link>
-      </p>
-      <p>
-        Forget Password?
-        <button
-          className="btn btn-link text-primary text-decoration-none"
-        //   onClick={resetPassword}
-        >
-          Reset Password
-        </button>
-      </p>
+          <p>
+            <Link
+              to="/register"
+              role="button"
+              className="text-danger text-decoration-none"
+            >
+              Create an account
+            </Link>
+          </p>
+          <p>
+            Forget Password?
+            <button
+              onClick={passReset}
+              className="btn btn-link text-primary text-decoration-none"
+            >
+              Reset Password
+            </button>
+          </p>
       </div>
     </div>
   );

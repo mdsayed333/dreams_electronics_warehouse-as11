@@ -12,7 +12,7 @@ const Inventory = () => {
             <div className='row'>
                 {
                     products.map((product, index) => <Product 
-                    key={product.id}
+                    key={product._id}
                     index={index}
                     product={product}
                     ></Product>)

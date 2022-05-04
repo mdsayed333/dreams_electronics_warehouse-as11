@@ -20,12 +20,19 @@ const HeaderNavbar = () => {
           <Navbar.Collapse id="responsive-navbar-nav">
             <Nav className="me-auto">
               <Nav.Link  as={Link} to='/'>Home</Nav.Link>
-              <Nav.Link href="#pricing">About</Nav.Link>
+              <Nav.Link as={Link} to='/blogs'>Blogs</Nav.Link>
               
             </Nav>
             <Nav>
+            
               {
-                user ? <button onClick={handleLogout} className="btn btn-outline-dark">Log Out</button>
+                user ? 
+                <>
+                  <Nav.Link  as={Link} to='/additem'>Add Item</Nav.Link>
+                  <Nav.Link  as={Link} to='/manageitem'>Manage Item</Nav.Link>
+                  <Nav.Link  as={Link} to='/myitems' className=" me-4">My Items</Nav.Link>
+                  <button onClick={handleLogout} className="btn btn-outline-dark">Log Out</button>
+                </>
                 : <Link to='/login' className="btn btn-outline-dark">Login</Link>
               }
               {/* <Link to='/login' className="btn btn-outline-dark">Login</Link> */}

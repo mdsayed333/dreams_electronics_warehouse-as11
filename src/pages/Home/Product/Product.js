@@ -5,7 +5,7 @@ import './Product.css';
 
 const Product = ({ product, index }) => {
     const navigate = useNavigate();
-    const {name, price, img, quantity, supplierName, description } = product;
+    const {name, price, img, quantity, supplierName, description, _id } = product;
 
 
 
@@ -14,18 +14,6 @@ const Product = ({ product, index }) => {
       {
         index < 6 && 
         <>
-      {/* <img src={img} className="" alt="..." />
-      <h5 className="">{name} </h5>
-      <p className="">
-        {description}
-      </p>
-      <h4>Price: {price} </h4>
-      <p>Quantity: {quantity} </p>
-      <h4>Supplier Name: {supplierName} </h4>
-      <div className="text-center pb-3">
-        <button onClick={() => navigate('/update')} className="my-button w-50">Update</button>
-      </div>
-         */}
       {/* <h2>Product : {product.id} </h2> */}
       <div className="card h-100  bg-light">
         <img src={img} className="card-img-top" alt="..." />
@@ -39,7 +27,7 @@ const Product = ({ product, index }) => {
           <h4>Supplier Name: {supplierName} </h4>
         </div>
         <div className="text-center pb-3">
-          <button onClick={() => navigate('/update')} className="my-button w-50">Update</button>
+          <button onClick={() => navigate(`/update/${_id}`)} className="my-button w-50">Update</button>
         </div>
       </div>
     </>

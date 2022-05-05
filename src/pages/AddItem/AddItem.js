@@ -31,7 +31,7 @@ const AddItem = () => {
   };
 
   return (
-    <div className="w-50 mx-auto addItemContainer">
+    <div className="w-50 mx-auto addItemContainer my-5">
       <h2 className="text-center my-3">Add a new item</h2>
 
       <Form onSubmit={handleSubmit}>
@@ -83,7 +83,7 @@ const AddItem = () => {
         </Form.Group>
 
         <div className="text-center">
-          <button className="my-button" type="submit">
+          <button className="my-button px-5" type="submit">
             Add Item
           </button>
         </div>

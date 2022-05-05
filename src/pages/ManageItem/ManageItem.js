@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+// import React, { useEffect } from 'react';
 import useProducts from '../../hooks/useProducts';
 import AllProducts from './AllProducts/AllProducts';
 

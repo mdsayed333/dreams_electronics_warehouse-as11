@@ -1,0 +1,22 @@
+.updateProductContainer{
+    border: 2px solid #303441;
+    border-radius: 10px;
+    margin: 20px;
+    padding: 20px;
+    background: rgba(242, 239, 236, 0.646);
+}
+
+.manageButton div{
+    border: 2px solid #303441;
+    padding: 10px;
+    background: rgba(242, 239, 236, 0.646);
+    border-radius: 10px;
+}
+.manageButton a{
+    border: 2px solid black;
+    font-weight: bold;
+    width: 50%;
+    padding: 10px;
+    font-size: 20px;
+    
+}

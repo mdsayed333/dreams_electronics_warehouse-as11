@@ -1,0 +1,24 @@
+
+.footer-title{
+    color: #F0F0F0;
+}
+.badge-color{
+    color: #dd7272;
+}
+.footer-container{
+    background-color: #303441;
+    color: white;
+    padding: 20px;    
+
+}
+.footer-icons{
+    font-size: 30px;
+    text-align: center;
+    margin: 15px;
+}
+
+.footer-icons:hover{
+    background-color: white;
+    color: black;
+    border-radius: 5px;
+}

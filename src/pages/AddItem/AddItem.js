@@ -50,6 +50,7 @@ const AddItem = () => {
             type="text"
             name="image"
             placeholder="Enter image URL"
+            required
           />
         </Form.Group>
         <Form.Group className="mb-3">
@@ -58,20 +59,21 @@ const AddItem = () => {
             as="textarea"
             name="description"
             placeholder="Enter product description"
+            required
           />
         </Form.Group>
         <Form.Group className="mb-3">
           <Form.Label>Email address</Form.Label>
-          <Form.Control type="email" name="email" placeholder="Enter email" />
+          <Form.Control type="email" name="email" value={user.email} placeholder="Enter email" disabled/>
         </Form.Group>
 
         <Form.Group className="mb-3">
           <Form.Label>Price</Form.Label>
-          <Form.Control type="number" name="price" placeholder="Price" />
+          <Form.Control type="number" name="price" placeholder="Price" required/>
         </Form.Group>
         <Form.Group className="mb-3">
           <Form.Label>Quantity</Form.Label>
-          <Form.Control type="number" name="quantity" placeholder="Quantity" />
+          <Form.Control type="number" name="quantity" placeholder="Quantity" required/>
         </Form.Group>
         <Form.Group className="mb-3">
           <Form.Label>Supplier Name</Form.Label>
@@ -79,6 +81,7 @@ const AddItem = () => {
             type="text"
             name="supplier"
             placeholder="Enter supplier name"
+            required
           />
         </Form.Group>
 

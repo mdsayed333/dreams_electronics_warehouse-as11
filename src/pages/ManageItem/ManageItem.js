@@ -1,4 +1,5 @@
 // import React, { useEffect } from 'react';
+import { Link } from 'react-router-dom';
 import useProducts from '../../hooks/useProducts';
 import AllProducts from './AllProducts/AllProducts';
 
@@ -47,6 +48,13 @@ const ManageItem = () => {
                         }
                     </tbody>
                 </table>
+                <div className="w-50 mx-auto">
+        <div className="text-center my-4 manageButton">
+          <Link to="/additem" className="btn btn-outline-dark">
+            ADD A NEW ITEM
+          </Link>
+        </div>
+      </div>
             </div>
         </div>
     );

@@ -3,6 +3,7 @@ import { Button, Form } from "react-bootstrap";
 import { Link, useNavigate } from "react-router-dom";
 import { useCreateUserWithEmailAndPassword } from 'react-firebase-hooks/auth';
 import auth from "../../firebase.init";
+import SocialLogin from "../SocialLogin/SocialLogin";
 
 const Register = () => {
   const navigate = useNavigate();
@@ -38,7 +39,8 @@ const Register = () => {
     };
 
   return (
-    <div className="w-50 mx-auto">
+    <div>
+      <div className="w-50 mx-auto">
       <h2>Create account</h2>
 
       <Form onSubmit={handleSubmit} className="my-3">
@@ -73,18 +75,21 @@ const Register = () => {
             required
           />
         </Form.Group>
-        <Button
-          className="w-50 d-block mx-auto mb-2"
-          variant="primary"
+        <button
+          className="w-50 d-block mx-auto mb-2 my-button"
           type="submit"
         >
           Register
-        </Button>
+        </button>
         {registerErr}
       </Form>
       <p>
           Already have an account? <Link to='/login'>Login</Link>
       </p>
+    </div>
+    <div className="w-50 mx-auto">
+      <SocialLogin></SocialLogin>
+    </div>
     </div>
   );
 };

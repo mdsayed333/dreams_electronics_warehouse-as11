@@ -16,7 +16,6 @@ const UpdateProducts = () => {
 
   const handleDelivered = (math) => {
     const newQuantity = (parseInt(quantity)+ parseInt(math));
-    console.log(newQuantity);
     const updatedProduct = {
       img: img,
       name: name,
@@ -27,7 +26,7 @@ const UpdateProducts = () => {
       supplierName: supplierName,
     };
 
-    const url = `http://localhost:5000/product/${productId}`
+    const url = `https://arcane-fjord-84563.herokuapp.com/product/${productId}`
   fetch(url, {
     method: "PUT",
     body: JSON.stringify(updatedProduct),
@@ -37,7 +36,6 @@ const UpdateProducts = () => {
   })
     .then((response) => response.json())
     .then((json) => {
-      console.log(json);
       setProduct(updatedProduct)
     });
   };
@@ -45,7 +43,7 @@ const UpdateProducts = () => {
   return (
     <div>
       <div className="mx-auto col-md-8 col-lg-6 updateProductContainer">
-      <h2 className="text-center">UPDATE PRODUCTS</h2>
+      <h2 className="text-center my-2">UPDATE PRODUCTS</h2>
       <div className="card h-100">
         <img src={img} className="card-img-top" alt="..." />
         <div className="card-body">
@@ -84,7 +82,7 @@ const UpdateProducts = () => {
                 setInputWarning('');
                 // inputValue();
               }else{
-                setInputWarning(<p className="text-danger">Please input a number</p>)
+                setInputWarning(<p className="text-danger">Please input a number of quantity.</p>)
               }
             }} className="my-button  w-100">Add</button>
           </div>

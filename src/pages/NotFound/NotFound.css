@@ -1,0 +1,13 @@
+.container404{
+    background-color: #30374d;
+    padding-top: 70px;
+    height: 50vh;
+    text-align: center;
+    align-items: center;
+    /* color: rgb(235, 230, 230); */
+    color: rgb(243, 67, 67);
+    margin: 20px 0 20px 0;
+}
+.container404 h3{
+    font-style: italic;
+}

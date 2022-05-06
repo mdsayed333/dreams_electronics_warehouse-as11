@@ -14,17 +14,16 @@ const Product = ({ product, index }) => {
       {
         index < 6 && 
         <>
-      {/* <h2>Product : {product.id} </h2> */}
       <div className="card h-100  bg-light">
         <img src={img} className="card-img-top" alt="..." />
         <div className="card-body">
-          <h5 className="card-title">{name} </h5>
+          <h4 className="title text-danger">{name} </h4>
           <p className="card-text">
             {description}
           </p>
-          <h4>Price: {price} </h4>
-          <p>Quantity: {quantity} </p>
-          <h4>Supplier Name: {supplierName} </h4>
+          <p>Price: <span className="text-danger">{price}</span> </p>
+          <p>Quantity: <span className="text-danger">{quantity}</span> </p>
+          <h5>Supplier: <span className="text-danger">{supplierName}</span> </h5>
         </div>
         <div className="text-center pb-3">
           <button onClick={() => navigate(`/update/${_id}`)} className="my-button w-50">Update</button>

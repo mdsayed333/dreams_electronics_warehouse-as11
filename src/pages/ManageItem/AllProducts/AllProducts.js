@@ -1,6 +1,7 @@
 import React from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faTrash } from "@fortawesome/free-solid-svg-icons";
+import './AllProducts.css';
 
 const AllProducts = ({ product, index, handleDelete }) => {
   const { name, img, quantity, price, supplierName, _id} = product;
@@ -13,7 +14,7 @@ const AllProducts = ({ product, index, handleDelete }) => {
       <td>{price}</td>
       <td>{quantity}</td>
       <td>
-        <button onClick={() => handleDelete(_id)} className="my-button rounded-circle">
+        <button onClick={() => handleDelete(_id)} className="delete-button ">
           <FontAwesomeIcon icon={faTrash} />
         </button>
       </td>

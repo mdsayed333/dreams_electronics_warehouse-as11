@@ -7,7 +7,7 @@ const Inventory = () => {
   const [products, setProducts] = useProducts([]);
 
   return (
-    <div>
+    <div className="inventory-container">
       <h2 className="text-center mt-5 mb-4 title">Inventory</h2>
       <div className="row">
         {products.map((product, index) => (

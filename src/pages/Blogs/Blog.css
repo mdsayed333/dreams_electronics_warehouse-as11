@@ -1,0 +1,11 @@
+
+.blogContainer{
+   
+    /* margin: 0 auto; */
+    text-align: justify;
+    background-color: rgb(236, 246, 246);
+    padding: 30px 15px;
+}
+.blogs{
+    width: 70%;
+}

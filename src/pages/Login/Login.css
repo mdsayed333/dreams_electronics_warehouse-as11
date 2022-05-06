@@ -1,0 +1,10 @@
+.loginForm{
+    box-shadow: rgba(0, 0, 0, 0.15) 0px 2px 8px;
+}
+
+.linkStyle{
+    text-decoration: none;
+}
+.linkStyle:hover{
+    text-decoration: underline;
+}

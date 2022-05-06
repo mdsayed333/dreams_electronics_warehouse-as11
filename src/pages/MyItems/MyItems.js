@@ -33,9 +33,9 @@ const MyItems = () => {
 
 
     return (
-        <div>
-            <h2>My Items</h2>
-            <div className="row card-group">
+        <div className='inventory-container'>
+            <h2 className='text-center container-title'>My Items</h2>
+            <div className="row">
                 {
                     myProducts.map(product => <Items 
                         key={product._id}

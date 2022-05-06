@@ -1,7 +1,16 @@
 @import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville&display=swap');
 
+.container-title{
+    font-family: 'Libre Baskerville', serif;
+    font-weight: 500;
+    font-size: 50px;
+}
 .title{
     font-family: 'Libre Baskerville', serif;
-    font-size: 50px;
     font-weight: 500;
+}
+
+.inventory-container{
+    background-color: rgb(238, 238, 238);
+    padding: 10px;
 }

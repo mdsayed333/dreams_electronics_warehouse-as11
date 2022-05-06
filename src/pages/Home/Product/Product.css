@@ -1,10 +1,19 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300&display=swap');
 
 
-/* .productCard{
-    border: 2px solid #303441;
-    margin: 10px;
-
-} */
+.productCard{
+    transition: 0.7s;
+}
+.productCard:hover{
+    transform: scale(1.03);
+}
+.productCard p{
+    color: #131314;
+    font-family: 'Quicksand', sans-serif;
+    font-size: 20px;
+    padding: 0%;
+    margin: 5px 0px;
+}
 
 .my-button{
     border: 2px solid #303441;   
@@ -12,8 +21,10 @@
     padding: 7px 20px;
     font-size: 18px;
     font-weight: bold;
+    transition: 0.3s;
 }
 .my-button:hover{
     background-color: #303441;
     color: white;
+    transform: scale(1.07);
 }

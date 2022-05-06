@@ -39,56 +39,58 @@ const Register = () => {
     };
 
   return (
-    <div>
-      <div className="w-50 mx-auto">
-      <h2>Create account</h2>
+    <div className="row justify-content-center">
+      <div className="col-12 col-md-8 col-lg-6 mx-auto">
+      <div className="loginForm p-3">
+      <h2 className="title">Create account</h2>
 
-      <Form onSubmit={handleSubmit} className="my-3">
-        <Form.Group className="mb-3">
-          <Form.Label htmlFor="email">Email</Form.Label>
-          <Form.Control
-            id='email'
-            name="email"
-            type="email"
-            placeholder="Enter email"
-            required
-          />
-        </Form.Group>
+<Form onSubmit={handleSubmit} className="my-3">
+  <Form.Group className="mb-3">
+    <Form.Label htmlFor="email">Email</Form.Label>
+    <Form.Control
+      id='email'
+      name="email"
+      type="email"
+      placeholder="Enter email"
+      required
+    />
+  </Form.Group>
 
-        <Form.Group className="mb-3">
-        <Form.Label htmlFor="password">Password</Form.Label>
-          <Form.Control
-            name="password"
-            type="password"
-            placeholder="Password"
-            required
-          />
-        </Form.Group>
-        {passError}
-        <Form.Group className="mb-3">
-        <Form.Label htmlFor="confirmPassword">Confirm Password</Form.Label>
-          <Form.Control
-            id="confirmPassword"
-            name="confirmPassword"
-            type="password"
-            placeholder="Confirm Password"
-            required
-          />
-        </Form.Group>
-        <button
-          className="w-50 d-block mx-auto mb-2 my-button"
-          type="submit"
-        >
-          Register
-        </button>
-        {registerErr}
-      </Form>
-      <p>
-          Already have an account? <Link to='/login'>Login</Link>
-      </p>
-    </div>
-    <div className="w-50 mx-auto">
+  <Form.Group className="mb-3">
+  <Form.Label htmlFor="password">Password</Form.Label>
+    <Form.Control
+      name="password"
+      type="password"
+      placeholder="Password"
+      required
+    />
+  </Form.Group>
+  {passError}
+  <Form.Group className="mb-3">
+  <Form.Label htmlFor="confirmPassword">Confirm Password</Form.Label>
+    <Form.Control
+      id="confirmPassword"
+      name="confirmPassword"
+      type="password"
+      placeholder="Confirm Password"
+      required
+    />
+  </Form.Group>
+  <button
+    className="w-50 d-block mx-auto mb-2 my-button"
+    type="submit"
+  >
+    Register
+  </button>
+  {registerErr}
+</Form>
+<p>
+    Already have an account? <Link className="linkStyle" to='/login'>Login</Link>
+</p>
+      </div>
+    <div className=" mx-auto">
       <SocialLogin></SocialLogin>
+    </div>
     </div>
     </div>
   );

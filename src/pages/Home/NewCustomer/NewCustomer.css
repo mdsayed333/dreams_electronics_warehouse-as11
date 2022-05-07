@@ -1,0 +1,15 @@
+
+.CustomerContainer{
+    padding: 20px 10px;
+    /* background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(175,175,209,1) 0%, rgba(179,220,228,1) 100%); */
+    background: linear-gradient(90deg, rgb(188, 186, 230) 0%, rgba(175,175,209,1) 0%, rgb(211, 230, 234) 100%);
+
+}
+.customer-form{
+    padding: 15px;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+    transition: 0.5s;
+}
+.customer-form:hover{
+    transform: scale(.95);
+}

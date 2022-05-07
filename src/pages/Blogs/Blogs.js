@@ -5,7 +5,7 @@ const Blogs = () => {
   return (
     <div className="container blogContainer">
       <div className="row justify-content-start">
-        <div className="col-8 blogs py-3">
+        <div className="col-12 col-md-9 blogs py-3 my-element">
             <h4>
             <span className="text-danger">Ques:</span>
             Difference between javascript and nodejs
@@ -53,7 +53,7 @@ const Blogs = () => {
         </div>
       </div>
       <div className="row justify-content-end">
-        <div className="blogs py-3">
+        <div className="col-12 col-md-9 blogs py-3 my-element-right">
             <h4>
             <span className="text-danger">Ques:</span>
             When should you use nodejs and when should you use mongodb?
@@ -75,7 +75,7 @@ const Blogs = () => {
         </div>
       </div>
       <div className="row justify-content-start">
-        <div className="blogs">
+        <div className="col-12 col-md-9 blogs py-3 my-element">
             <h4>
             <span className="text-danger">Ques:</span>
             Differences between SQL and NoSQL databases.

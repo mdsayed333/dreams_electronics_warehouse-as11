@@ -1,6 +1,7 @@
 import React from "react";
 import Banner from "../Banner/Banner";
 import Inventory from "../Inventory/Inventory";
+import NewCustomer from "../NewCustomer/NewCustomer";
 
 const Home = () => {
   return (
@@ -8,7 +9,9 @@ const Home = () => {
       
       <Banner></Banner>
       <Inventory></Inventory>
-      <h1>Add 2 New Section...</h1>
+
+      <NewCustomer></NewCustomer>
+      <h1>Add 1 New Section...</h1>
     </div>
   );
 };

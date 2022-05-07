@@ -14,7 +14,7 @@ const Product = ({ product, index }) => {
       {
         index < 6 && 
         <>
-      <div className="card h-100  bg-light">
+      <div className="card cardShadow  h-100  bg-light">
         <img src={img} className="card-img-top" alt="..." />
         <div className="card-body">
           <h4 className="title text-danger">{name} </h4>

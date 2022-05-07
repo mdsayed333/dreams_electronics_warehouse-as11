@@ -9,7 +9,7 @@ const MyItems = () => {
     const [myProducts, setMyProducts] = useState([]);
     // const navigate = useNavigate();
     const email = user?.email;
-    const url = `http://localhost:5000/myProduct?email=${email}`;
+    const url = `https://arcane-fjord-84563.herokuapp.com/myProduct?email=${email}`;
     fetch(url)
     .then(res => res.json())
     .then(data => setMyProducts(data));
@@ -17,18 +17,18 @@ const MyItems = () => {
 
 
     const handleDelete = (_id) => {
-        // const confirm = window.confirm("Are you sure you want to delete ...");
-        // if(confirm){
-        //     fetch(`https://arcane-fjord-84563.herokuapp.com/product/${_id}`, {
-        //     method: 'DELETE',
-        //     })
-        //     .then(res => res.json())
-        //     .then(data => {
-        //         console.log(data);
-        //         const remaining = myProducts.filter(product => product._id !== _id);
-        //         // setMyProducts(remaining);
-        //     });
-        // }
+        const confirm = window.confirm("Are you sure you want to delete ...");
+        if(confirm){
+            fetch(`https://arcane-fjord-84563.herokuapp.com/product/${_id}`, {
+            method: 'DELETE',
+            })
+            .then(res => res.json())
+            .then(data => {
+                console.log(data);
+                const remaining = myProducts.filter(product => product._id !== _id);
+                setMyProducts(remaining);
+            });
+        }
     }
 
 

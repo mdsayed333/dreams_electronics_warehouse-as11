@@ -3,13 +3,18 @@ import { Form } from "react-bootstrap";
 import "./NewCustomer.css";
 
 const NewCustomer = () => {
+
+  const handleSubmit = event =>{
+    event.preventDefault();
+  }
+
   return (
     <div className="CustomerContainer py-5">
       <div className="row">
         <div className="col-6 p-2">
           <div className=" customer-form">
             <h2 className="text-center title">New Customer</h2>
-            <Form className="my-3 text-white">
+            <Form onSubmit={handleSubmit} className="my-3 text-white">
               <Form.Group className="mb-3">
                 <Form.Label htmlFor="name">Name</Form.Label>
                 <Form.Control

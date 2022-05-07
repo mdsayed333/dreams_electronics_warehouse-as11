@@ -8,7 +8,7 @@ const Inventory = () => {
 
   return (
     <div className="inventory-container">
-      <h2 className="text-center mt-5 mb-4 title">Inventory</h2>
+      <h1 className="text-center mt-5 mb-4 title">Inventory</h1>
       <div className="row">
         {products.map((product, index) => (
           <Product key={product._id} index={index} product={product}></Product>

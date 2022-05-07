@@ -5,6 +5,10 @@
     padding: 20px;
     background: rgba(242, 239, 236, 0.646);
 }
+.updateProductCard:hover{
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+
+}
 
 .manageButton div{
     border: 2px solid #303441;

@@ -43,15 +43,17 @@ const UpdateProducts = () => {
   return (
     <div>
       <div className="mx-auto col-md-8 col-lg-6 updateProductContainer">
-      <h2 className="text-center my-2">UPDATE PRODUCTS</h2>
-      <div className="card h-100">
+      <h2 className="text-center my-2 title">UPDATE PRODUCTS</h2>
+      <div className="card h-100 updateProductCard">
         <img src={img} className="card-img-top" alt="..." />
         <div className="card-body">
-          <h5 className="card-title">{name} </h5>
-          <p className="card-text">{description}</p>
-          <h4>Price: {price} </h4>
-          <p>Quantity: {quantity} </p>
-          <h4>Supplier Name: {supplierName} </h4>
+          <h4 className="title text-danger">{name} </h4>
+          <p className="card-text">
+            {description}
+          </p>
+          <p>Price: <span className="text-danger">{price}</span> </p>
+          <p>Quantity: <span className="text-danger">{quantity}</span> </p>
+          <h5>Supplier: <span className="text-danger">{supplierName}</span> </h5>
         </div>
         <div className="mx-auto bg-white">
           <button

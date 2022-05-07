@@ -17,18 +17,18 @@ const MyItems = () => {
 
 
     const handleDelete = (_id) => {
-        const confirm = window.confirm("Are you sure you want to delete ...");
-        if(confirm){
-            fetch(`https://arcane-fjord-84563.herokuapp.com/product/${_id}`, {
-            method: 'DELETE',
-            })
-            .then(res => res.json())
-            .then(data => {
-                console.log(data);
-                const remaining = myProducts.filter(product => product._id !== _id);
-                setMyProducts(remaining);
-            });
-        }
+        // const confirm = window.confirm("Are you sure you want to delete ...");
+        // if(confirm){
+        //     fetch(`https://arcane-fjord-84563.herokuapp.com/product/${_id}`, {
+        //     method: 'DELETE',
+        //     })
+        //     .then(res => res.json())
+        //     .then(data => {
+        //         console.log(data);
+        //         const remaining = myProducts.filter(product => product._id !== _id);
+        //         // setMyProducts(remaining);
+        //     });
+        // }
     }
 
 

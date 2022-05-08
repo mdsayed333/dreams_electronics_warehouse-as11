@@ -28,11 +28,12 @@ const MonthlyReport = () => {
         <h1 className="text-center title my-5 fw-bolder">
           Monthly Investment, Seals And Revenue
         </h1>
-        <div className="col-md-6">
+        <div className="col-12 col-lg-6 my-3">
           <div className="chartContainer p-3">
             <h2 className="title">Investment Vs Seals</h2>
             <ComposedChart
-              width={450}
+              
+              width={400}
               height={350}
               data={reports}
               margin={{
@@ -53,11 +54,11 @@ const MonthlyReport = () => {
           </div>
         </div>
 
-        <div className="col-md-6">
+        <div className="col-12 col-lg-6 my-3">
           <div className="chartContainer p-3">
             <h2 className="title">Sells Vs Revenue</h2>
             <AreaChart
-              width={450}
+              width={400}
               height={350}
               data={reports}
               margin={{

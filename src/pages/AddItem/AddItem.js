@@ -36,7 +36,7 @@ const AddItem = () => {
   };
 
   return (
-    <div className="w-50 mx-auto addItemContainer my-5">
+    <div className="col-12 col-md-6 mx-auto addItemContainer my-5">
       <h2 className="title text-center my-3">Add a new item</h2>
 
       <Form onSubmit={handleSubmit}>

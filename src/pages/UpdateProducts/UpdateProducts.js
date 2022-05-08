@@ -87,7 +87,7 @@ const UpdateProducts = () => {
         </div>
       </div>
     </div>
-        <div className="w-50 mx-auto manageButton">
+        <div className="w-md-50 mx-auto manageButton">
           <div className="text-center my-4 ">
               <Link to='/manageitem' className="btn btn-outline-dark">Manage All Inventory</Link>
           </div>

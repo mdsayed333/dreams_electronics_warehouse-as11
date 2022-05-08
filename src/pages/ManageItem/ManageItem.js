@@ -47,7 +47,7 @@ const ManageItem = () => {
             ))}
           </tbody>
         </table>
-        <div className="w-50 mx-auto">
+        <div className="w-md-50 mx-auto">
           <div className="text-center my-4 manageButton">
             <Link to="/additem" className="btn btn-outline-dark">
               ADD A NEW ITEM

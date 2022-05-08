@@ -14,7 +14,7 @@ const Inventory = () => {
           <Product key={product._id} index={index} product={product}></Product>
         ))}
       </div>
-      <div className="w-50 mx-auto">
+      <div className="w-100 w-md-50 mx-auto">
         <div className="text-center my-4 manageButton">
           <Link to="/manageitem" className="btn btn-outline-dark">
             Manage All Inventory

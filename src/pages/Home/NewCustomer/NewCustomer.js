@@ -11,7 +11,7 @@ const NewCustomer = () => {
   return (
     <div className="CustomerContainer py-5">
       <div className="row">
-        <div className="col-6 p-2 py-3">
+        <div className="col-12 col-md-6 p-2 py-3">
           <div className=" customer-form">
             <h2 className="text-center title">New Customer</h2>
             <Form onSubmit={handleSubmit} className="my-3 text-white">
@@ -60,7 +60,7 @@ const NewCustomer = () => {
             </Form>
           </div>
         </div>
-        <div className="col-6 d-flex align-items-center">
+        <div className="col-12 col-md-6 d-flex align-items-center">
           <div className="customer-form">
             <h3 className="title text-center pb-3">We committed to give the best service to our customer.</h3>
             <img

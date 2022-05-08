@@ -17,7 +17,7 @@ const MonthlyReport = () => {
   const [reports, setReports] = useState([]);
 
   useEffect(() => {
-    fetch("http://localhost:5000/report")
+    fetch("https://arcane-fjord-84563.herokuapp.com/report")
       .then((res) => res.json())
       .then((data) => setReports(data));
   }, []);

@@ -3,9 +3,14 @@ import { Form } from "react-bootstrap";
 import "./AddItem.css";
 import { useAuthState } from "react-firebase-hooks/auth";
 import auth from "../../firebase.init";
+import Loadding from "../Shared/Loadding/Loadding";
 
 const AddItem = () => {
   const [user, loading, error] = useAuthState(auth);
+
+  if (loading) {
+    return <Loadding></Loadding>;
+  }
 
   const handleSubmit = (event) => {
     event.preventDefault();
@@ -22,9 +27,9 @@ const AddItem = () => {
     fetch("https://arcane-fjord-84563.herokuapp.com/product", {
       method: "POST",
       headers: {
-          "Content-type": "application/json",
-        },
-        body: JSON.stringify(product)
+        "Content-type": "application/json",
+      },
+      body: JSON.stringify(product),
     })
       .then((response) => response.json())
       .then((data) => console.log(data));
@@ -64,16 +69,32 @@ const AddItem = () => {
         </Form.Group>
         <Form.Group className="mb-3">
           <Form.Label>Email address</Form.Label>
-          <Form.Control type="email" name="email" value={user.email} placeholder="Enter email" disabled/>
+          <Form.Control
+            type="email"
+            name="email"
+            value={user.email}
+            placeholder="Enter email"
+            disabled
+          />
         </Form.Group>
 
         <Form.Group className="mb-3">
           <Form.Label>Price</Form.Label>
-          <Form.Control type="number" name="price" placeholder="Price" required/>
+          <Form.Control
+            type="number"
+            name="price"
+            placeholder="Price"
+            required
+          />
         </Form.Group>
         <Form.Group className="mb-3">
           <Form.Label>Quantity</Form.Label>
-          <Form.Control type="number" name="quantity" placeholder="Quantity" required/>
+          <Form.Control
+            type="number"
+            name="quantity"
+            placeholder="Quantity"
+            required
+          />
         </Form.Group>
         <Form.Group className="mb-3">
           <Form.Label>Supplier Name</Form.Label>

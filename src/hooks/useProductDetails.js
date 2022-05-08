@@ -1,17 +1,15 @@
-import { useEffect, useState } from "react"
-import { useParams } from "react-router-dom";
+import { useEffect, useState } from "react";
 
-const useProductDetails = (productId) =>{
-    
-    const [product, setProduct] = useState([]);
+const useProductDetails = (productId) => {
+  const [product, setProduct] = useState([]);
 
-    useEffect( () => {
-        const url = `https://arcane-fjord-84563.herokuapp.com/product/${productId}`;
-        fetch(url)
-        .then(res => res.json())
-        .then(data => setProduct(data))
-    },[productId]);
+  useEffect(() => {
+    const url = `https://arcane-fjord-84563.herokuapp.com/product/${productId}`;
+    fetch(url)
+      .then((res) => res.json())
+      .then((data) => setProduct(data));
+  }, [productId]);
 
-    return [product, setProduct];
-}
+  return [product, setProduct];
+};
 export default useProductDetails;

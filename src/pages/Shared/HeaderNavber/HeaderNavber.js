@@ -4,11 +4,14 @@ import { Container, Nav, Navbar, NavDropdown } from "react-bootstrap";
 import { useAuthState } from "react-firebase-hooks/auth";
 import { Link } from "react-router-dom";
 import auth from "../../../firebase.init";
-import navbarLogo from '../../../images/dreams-electronics-logo1.png';
+import Loadding from "../Loadding/Loadding";
 
 const HeaderNavbar = () => {
-  const [user, loading, error] = useAuthState(auth);
+  const [user, loading] = useAuthState(auth);
 
+  if(loading){
+    return <Loadding></Loadding>
+  }
   const handleLogout = () => {
     signOut(auth);
   }
@@ -17,7 +20,6 @@ const HeaderNavbar = () => {
       <Navbar collapseOnSelect expand="lg">
         <Container className="px-0">
           <Navbar.Brand as={Link} to='/'>
-          {/* Dreams Electronics */}
           <img src='https://i.ibb.co/RpPycr8/dreams-electronics-logo.png' alt="" className="m-0 p-0" style={{height: '80px', width: ''}}/>
           </Navbar.Brand>
           <Navbar.Toggle aria-controls="responsive-navbar-nav" />
@@ -25,7 +27,6 @@ const HeaderNavbar = () => {
             <Nav className="me-auto">
               <Nav.Link className="linkStyle"  as={Link} to='/'>Home</Nav.Link>
               <Nav.Link as={Link} to='/blogs' className="linkStyle">Blogs</Nav.Link>
-              
             </Nav>
             <Nav>
             
@@ -39,11 +40,6 @@ const HeaderNavbar = () => {
                 </>
                 : <Link to='/login' className="btn btn-outline-dark">Login</Link>
               }
-              {/* <Link to='/login' className="btn btn-outline-dark">Login</Link> */}
-              {/* <Nav.Link href="#deets">Login</Nav.Link> */}
-              {/* <Nav.Link eventKey={2} href="#memes">
-                Dank memes
-              </Nav.Link> */}
             </Nav>
           </Navbar.Collapse>
         </Container>

@@ -1,10 +1,10 @@
 import React from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faTrash } from "@fortawesome/free-solid-svg-icons";
-import './AllProducts.css';
+import "./AllProducts.css";
 
 const AllProducts = ({ product, index, handleDelete }) => {
-  const { name, img, quantity, price, supplierName, _id} = product;
+  const { name, img, quantity, price, supplierName, _id } = product;
 
   return (
     <tr>

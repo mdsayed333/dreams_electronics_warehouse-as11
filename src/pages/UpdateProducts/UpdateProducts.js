@@ -12,8 +12,6 @@ const UpdateProducts = () => {
   const { name, price, img, quantity, supplierName, description, email } =
     product;
 
-  
-
   const handleDelivered = (math) => {
     const newQuantity = (parseInt(quantity)+ parseInt(math));
     const updatedProduct = {
@@ -74,7 +72,6 @@ const UpdateProducts = () => {
               placeholder="Input Quantity"
               onChange={(event)=> {
                 setInputAdd(event.target.value);
-              //  const inputValue = ()=> event.target.value;
               }}
             /> 
             <br />
@@ -82,7 +79,6 @@ const UpdateProducts = () => {
               if(inputAdd >= 1){
                 handleDelivered(+inputAdd);
                 setInputWarning('');
-                // inputValue();
               }else{
                 setInputWarning(<p className="text-danger">Please input a number of quantity.</p>)
               }

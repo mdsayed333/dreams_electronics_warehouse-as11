@@ -35,9 +35,11 @@ Stackoverflow Question link: [Stackoverflow Question](https://stackoverflow.com/
 
 > React Firebase Hooks
 
-> Google Font
+> React Icon
 
 > React Toastify
+
+> Google Font
 
 > Google Firebase
 

@@ -25,12 +25,12 @@ const MonthlyReport = () => {
   return (
     <div className="container">
       <div className="row pb-5 chart-section">
-        <h1 className="text-center title my-5">
+        <h1 className="text-center title my-5 fw-bolder">
           Monthly Investment, Seals And Revenue
         </h1>
         <div className="col-md-6">
           <div className="chartContainer p-3">
-            <h2 className="title">Investment and Seals</h2>
+            <h2 className="title">Investment Vs Seals</h2>
             <ComposedChart
               width={450}
               height={350}
@@ -55,7 +55,7 @@ const MonthlyReport = () => {
 
         <div className="col-md-6">
           <div className="chartContainer p-3">
-            <h2 className="title">Sells and Revenue</h2>
+            <h2 className="title">Sells Vs Revenue</h2>
             <AreaChart
               width={450}
               height={350}

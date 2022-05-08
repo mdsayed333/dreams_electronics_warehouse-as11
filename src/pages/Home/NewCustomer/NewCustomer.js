@@ -11,7 +11,7 @@ const NewCustomer = () => {
   return (
     <div className="CustomerContainer py-5">
       <div className="row">
-        <div className="col-6 p-2">
+        <div className="col-6 p-2 py-3">
           <div className=" customer-form">
             <h2 className="text-center title">New Customer</h2>
             <Form onSubmit={handleSubmit} className="my-3 text-white">

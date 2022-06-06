@@ -9,6 +9,7 @@ Server side private repo link: [Dreams Electronic](https://github.com/Programmin
 
 Stackoverflow Question link: [Stackoverflow Question](https://stackoverflow.com/questions/72155330/update-object-value-using-spread-operator).
 
+## This is a warehouse management Website.
 
 ## Features and Functionality
 - Home page have a navbar and a banner
